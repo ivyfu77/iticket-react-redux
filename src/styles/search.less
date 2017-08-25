@@ -1,0 +1,431 @@
+@import "./media.less";
+@import "./colors.less";
+@import "./fonts.less";
+
+
+.search-input {
+    width: 100%;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 1.3em;
+    padding: 10px;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
+
+
+// Search Modal Styles
+
+.search-component-container {
+    margin-top: 2em;
+    text-align: center;
+    @media @smartphones{
+        text-align: center;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .search-box-input-container{
+        text-align: center;
+        input#search-box-input-main {
+            margin-top: 3em;
+            border: none;
+            border-radius: 0.2em;
+            width: 50%;
+            font-size: 1.8em;
+            padding: 0.4em;
+            font-weight: lighter;
+            &:focus{
+                outline: none;
+            }
+            @media @smartphones{
+                margin-top: 0;
+                width: 95%;
+            }
+        }
+    }
+    
+}
+
+.search-params{
+    margin-top: 2em;
+}
+
+@keyframes items-animation{
+    from {
+        opacity: 0;
+        margin-top: 5em
+    }
+    to {
+        opacity: 1;
+       margin-top: 0
+    }
+}
+
+.result-item{
+    display: inline-block;
+    width: 11em;
+    vertical-align: top;
+    margin-bottom: 2em;
+    padding: 5px;
+    animation-name: items-animation;
+    animation-duration: 500ms;
+    text-align: left;
+    @media @smartphones{
+        width: 11em;
+    }
+    img{
+        width: 11em;
+        min-height: 149px;
+        @media @smartphones{
+            width: 11em;
+        }
+    }
+    .event-result-eventname {
+        font-size: 0.7em;
+        color: white;
+        margin-top: 0.5em;
+        height: 3em;
+    }
+    .event-result-cityName{
+        font-size: 0.8em;
+        color: white;
+        opacity: 0.5;
+    }
+    .event-result-dates {
+        font-size: 0.7em;
+        color: white;
+        margin-top: 0.5em;
+    }
+}
+
+.search-component-items-container {
+    text-align: left;
+    width: 95%;
+    margin-left: auto;
+    @media @smartphones{
+        width: 100%;
+        text-align: inherit;
+    }
+}
+
+button.loadmore-results-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: @selected;
+    font-size: 0.9em;
+    font-weight: lighter;
+    border: none;
+    width: 12em;
+    height: 3em;
+    border-radius: 5px;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    &:disabled{
+        display: none;
+    }
+}
+
+.search-component-container{
+    &.input-components {
+        text-align: center;
+        &.clear-filters-active{
+            margin-bottom: 3em;
+            @media @smartphones{
+                margin-bottom: -1em;
+            }
+        }
+    }
+    
+    .input-drop-downs {
+        display: inline-block;
+        @media @smartphones{
+            display: block;
+            margin-bottom: 2em;
+        }
+        select.drop-down {
+            height: 3em;
+            width: 20em;
+        }
+        &.date-selection {
+            margin-left: 5em;
+            margin-right: 5em;
+            @media @smartphones{
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// Drop Down Component
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 1em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    width: 15em;
+    text-align: left;
+    border-radius: 0.2em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    @media @smartphones{
+        width: 100%;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+    width: 15em;
+    max-height: 19em;
+    overflow: auto;
+    text-align: left;
+    border-radius: 0.2em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    @media @smartphones{
+        width: 100%;
+    }
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.dropdown{
+    @media @smartphones{
+        display: none;
+    }
+    &.non-selected {
+        opacity: 0.5;
+        color: lightgray;
+        &:hover{
+            opacity: 1;
+            color: black;
+        }
+    }
+    &.selected {
+        .dropbtn {
+            color: @selected;
+        }
+    }
+    .dropdown-label {
+        text-align: left;
+        color: white;
+        padding-bottom: 0.2em;
+        font-weight: lighter;
+    }
+    span.fa.fa-chevron-down.dropdown-list {
+        float: right;
+    }    
+}
+
+.clear-filters-container {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 8.7em;
+    @media @smartphones{
+        position: inherit;
+        margin-top: 1em;
+        text-align: right;
+        margin-left: 0;
+    }
+    .clear-filters-btn{
+        border: none;
+        background-color: @selected;
+        color: white;
+        padding: 1em;
+        font-size: 0.7em;
+        opacity: 0.8;
+        .clear-filters-icon{
+            margin-right: 0.5em;
+        }
+        
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+}
+
+// Date Drop Down Component Styles
+
+.date-item{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 1em;
+    &.select-date-item {
+        width: 14em;
+        text-align: left;
+        border-radius: 0.2em;
+        &.from{
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &.to{
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            margin-left: -1em;
+        }
+    }
+}
+
+.mobile-date-item{
+    display: inline-block;
+    &.date-selected{
+        color: @selected;
+    }
+}
+
+.mobile-dropdown-item{
+    display: inline-block;
+    &.selected{
+        color: @selected;
+    }
+}
+
+.date-drop-down-container{
+    &.non-active{
+        opacity: 0.5;
+        color: lightgray;
+        &:hover{
+           opacity: 1;
+           color: black;
+        }
+    }
+}
+
+.date-drop-down-display-container{
+    &:hover{
+        cursor: pointer;
+    }
+    
+    .date-selected{
+        color: @selected;
+    }
+    @media @smartphones{
+        display: none;
+    }
+}
+
+.date-picker-mobile{
+    display: none;
+    @media @smartphones{
+        display: initial;
+    }
+}
+
+.date-picker-module{
+    position: absolute;
+    margin-top: 1em;
+}
+
+.-date-top-triangle {
+    border: 0 solid white;
+    width: 0;
+    border-top-width: 0px;
+    border-bottom-width: 15px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    margin-left: 1em;
+    margin-top: -0.5em;
+}
+
+// calender module overrides 
+
+.rdr-Calendar{
+    border-radius: 0.3em !important;
+}
+
+.rdr-DateRange {
+    border-radius: 1em !important;
+}
+
+.rdr-WeekDay {
+    color: lightgrey;
+}
+
+
+// Mobile Styles
+.mobile-drop-down{
+    @media @desktops{
+        display: none;
+    }
+    
+    @media @landscapes{
+        display: none;
+    }
+    display: block;
+    .mobile-dropbtn{
+        background-color: white;
+        color: black;
+        padding: 0.6em;
+        font-size: 1.5em;
+        border: none;
+        cursor: pointer;
+        width: 15em;
+        text-align: left;
+        border-radius: 0.2em;
+        width: 100%;
+        &:focus{
+            outline: none;
+        }
+    }
+    .mobile-dropdown-list-icon{
+        width: 1.5em;
+    }
+    
+    &.mobile-dropdown-list{
+        &.non-selected{
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+

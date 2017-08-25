@@ -1,0 +1,532 @@
+@import "./colors.less";
+
+/*
+ * header section
+ */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid #3c3939;
+    z-index: 1;
+}
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.search-event {
+    display: none;
+}
+.my-account {
+    display: none;
+}
+
+/*
+ * homeSearch section
+ */
+.search {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    font-size: 1.5em;
+    color: #FF3738;
+}
+.logo {
+    height:35px;
+}
+.toggle-btn {
+    position: absolute;
+    left: 10px;
+    top: 22px;
+    font-size: 1.5em;
+    color: #FF3738;
+}
+#fullScreenImage {
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 32% -95px;
+    background-size: 1014px;
+    background-repeat: no-repeat;
+}
+.top-links {
+    display: none;
+}
+.search-container {
+    width: 90%;
+    margin-top: 50px;
+}
+.search-container h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.search-box {
+    position: relative;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+}
+.search-msg {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    font-size: 1em;
+    color: grey;
+}
+.search-btn {
+    position: absolute;
+    right: 0;
+    background-color: @red;
+    height: 50px;
+    width: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.search-box a {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 1.3em;
+    color: white;
+}
+
+/*
+ * Events Nearby, Recent Events section
+ */
+#events {
+    background-color: #080808;
+    background: linear-gradient(#080808, #5d5c5c);
+    color: white;
+    padding-top: 30px;
+    border-top: 1px solid rgba(47, 47, 47, 0.66);
+}
+.events-header {
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;  
+}
+#recent-events .events-header {
+    border-top: 1px solid rgba(169, 169, 169, 0.3);
+}
+.events-header h3 {
+    font-weight: 300;
+}
+.events-location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 300px;
+}
+.events-current-locate {
+    width: 80px;
+}
+.events-current-locate span:first-child {
+    color: @red;
+    margin-left: 0px;
+}
+.events-current-locate span:last-child {
+    font-size: 0.65em;
+    margin-left: 5px;
+}
+#events-change-location {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, .1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    border: 1px solid rgba(170, 170, 170, 0.51);
+    color: rgb(170, 170, 170);
+    font-size: 0.65em;
+    margin-left: 5px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 107px;
+    background-color: rgba(76, 76, 76, 0.72);
+}
+.events-container{
+    height: 200px;
+    max-width: 1100px;
+    width: 95%;
+    display: flex;
+    align-items: flex-start;
+    overflow: scroll;
+    margin: 0 auto;
+}
+.events-paging {
+    position: absolute;
+    right: 5px;
+    display: flex;
+}
+#recent-events .events-paging {
+    top: 22px;
+}
+.events-paging-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:26px;
+    height:26px;
+    border-radius: 13px;
+    background-color: rgba(134, 133, 133, 0.2);
+    margin-left: 3px;
+    font-size: 0.7em;
+    color: @red;
+    cursor: pointer;
+}
+.event-item-small {
+    min-width: 160px;
+    max-width: 200px;
+    height: 150px;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+.event-item-small .event-img {
+    width: 95%;
+    border-radius: 5px;
+}
+.event-item-small h5 {
+    display: flex;
+    height: 30px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+.event-item-small h5 p {
+    width: 80%;
+}
+.event-item-small h5 i {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    color: #868585; 
+}
+.event-date {
+    font-size: 0.8em;
+    margin-top: 7px;
+}
+.event-location {
+    font-size: 0.9em;
+    margin-top: 3px;
+    color: #9e9e9e
+}
+.events-timefilter a{
+    margin-right: 15px;
+    font-size: 0.9em;
+    font-weight: 300;
+    cursor: pointer;
+    color: #9e9e9e;
+}
+.events-timefilter a:hover {
+    color: white;
+}
+.events-timefilter a.select {
+    color: white;
+    font-size: 1.1em;
+}
+/*
+ * sell-with-us section
+ */
+#sell-with-us {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 1660px;
+    z-index: -2;
+}
+#sell-with-us .dot-mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+#sell-with-us h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    padding-top: 60px;
+    color:#2f2f2f;
+}
+.with-us-container p {
+    color: #615F61;
+    line-height: 150%;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+.with-us-container {
+    width: 90%;
+    max-width: 515px;
+}
+.with-us-item-container {
+    display: none;
+}
+.with-us-btn-container {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.with-us-btn-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    height: 50px;
+    width: 45%;
+    max-width: 179px;
+    border-radius: 5px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+.with-us-btn-container .left-btn {
+    background-color: white;
+}
+.with-us-btn-container .right-btn {
+    color: white;
+    background-color: #FF3738;
+}
+.with-us-image img {
+    display: none;
+    height: 650px;
+}
+
+#work-with {
+    display: none;
+}
+//Breakpoints settings for Responsive control
+@media screen and (min-width: 420px) {
+    .search-container {
+        width: 80%;
+    }
+    .events-location {
+        min-width: 400px;
+    }
+}
+@media screen and (min-width: 570px) {
+    .search-container {
+        margin-top: 0;
+    }
+    .toggle-btn {
+        display: none;
+    }
+    header {
+        position: relative;
+    }
+    .header-container {
+        justify-content: flex-start;
+        padding-left: 10px;
+        width: 90%;
+    }
+    .search-event {
+        display: block;
+        color: white;
+        font-size: 0.6em;
+        letter-spacing: 1px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    .my-account {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        font-size: 0.6em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    header i.fa {
+        font-size: 1.2em;
+    }
+    .search {
+        display: none;
+    }
+    #toggleMenu {
+        display: none;
+    }
+    #sell-with-us {
+        padding: 0 30px;
+        justify-content: flex-start;
+    }
+    #sell-with-us .dot-mask {
+        display: block;
+    }
+}
+@media screen and (min-width: 540px) {
+    .events-location {
+        min-width: 460px;
+    }
+}
+@media screen and (min-width: 612px) {
+    .events-header {
+        height: 60px;
+        padding-top: 20px;
+    }
+    #recent-events .events-paging {
+        top: 35px;
+    }
+    .events-current-locate span:first-child {
+        margin-left: 20px;
+    }
+    .events-current-locate {
+        width: 100px;
+    }
+    #sell-with-us {
+        height: 650px;
+        background-size: 2200px;
+    }
+    .with-us-item-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .with-us-item {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+    .with-us-item h5 {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+    }
+    .with-us-item img {
+        height: 23px;
+        padding-right: 15px;
+    }
+    .with-us-item p {
+        font-size: 0.8em;
+        color: black;
+        padding-top: 5px;
+        padding-left: 38px;
+        color: #615F61;
+    }
+}
+@media screen and (min-width: 801px) {
+    .header-container {
+        width: 85%;
+    }
+    #fullScreenImage {
+        height: 600px;
+        background-size: 1100px;
+    }
+    .search-container {
+        width: 640px;
+    }
+}
+@media screen and (min-width: 821px) {
+    .with-us-image {
+        display: block;
+        margin-left: 15%;
+    }
+    .with-us-image img:first-child {
+        display: inline;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .logo.home {
+        height: 50px;
+        margin-top: 150px;
+    }
+    .search-event.home {
+        margin-top: 150px;
+    }
+    .top-links {
+        display: block;
+        position: absolute;
+        top: 29px;
+        left: 25%;
+    }
+    .top-links a {
+        color: white;
+        font-size: 0.6em;
+        letter-spacing: 1px;
+    }
+    .top-links a:last-child {
+        margin-left: 30px;
+    }
+    #fullScreenImage {
+        height: 768px;
+        background-position: 35% -161px;
+        background-size: 1500px;
+        background-attachment: fixed;
+    }
+    #sell-with-us, #sell-with-us .dot-mask {
+        background-position: center;
+        justify-content: center;
+        background-attachment: fixed;
+    }
+    .with-us-image {
+        margin-left: 5%;
+    }
+    .with-us-image img:nth-child(2) {
+        display: inline;
+    }
+    #work-with {
+        display: block;
+        background-color: rgb(12,12,12);
+        color: white;
+        padding: 20px 0;
+    }
+    #work-with h3 {
+        font-weight: 300;
+    }
+    .work-with-container {
+        width: 800px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .work-with-logo-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .work-with-logo-box img {
+        width: 100px;
+        padding: 0 10px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #fullScreenImage {
+        background-size: 1920px;
+        background-position: center;
+        height: 100vh;
+    }
+    .with-us-image img:last-child {
+        display: inline;
+    }
+}
+@media screen and (min-width: 1800px) {
+    #fullScreenImage {
+        background-size: 2200px;
+    }
+}

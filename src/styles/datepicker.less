@@ -1,0 +1,84 @@
+@import "./media.less";
+@import "./colors.less";
+@import "./fonts.less";
+@import "./images.less";
+
+
+#date-picker-dates-component-container {
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+@media @smartphones{
+    .rdr-DateRange{
+        display: block !important;
+        width: 90% !important;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        text-align: center !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    
+    .rdr-Calendar{
+         display: block !important;   
+         margin-left: auto !important;
+         margin-right: auto !important;
+         width: 100% !important;
+         background-color: transparent !important;
+         color: white !important;
+    }
+    
+    .rdr-WeekDay{
+        width: 14% !important;
+    }
+    
+    .rdr-Days{
+        width: 100% !important;
+        span{
+            width: 14% !important;
+            span {
+                width: 100% !important;
+            }
+        }
+        
+    }
+    
+    .rdr-Day{
+        &.is-inRange{
+            background-color: @selected !important; 
+        }
+    }
+}
+@media @smartphones{
+    #iticket-modal {
+        background-image: @menuBackground;
+        background-repeat: no-repeat;
+        background-size: 100% 100%, contain;
+    }
+}
+
+#date-picker-confirm-button-container {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    .date-picker-confirm-button {
+        border: none;
+        background-color: #11b683;
+        padding: 17px;
+        border-radius: 5px;
+        width: 90%;
+        color: white;
+        font-size: 1em;
+        &.disabled{
+            background-color: lightgray;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}

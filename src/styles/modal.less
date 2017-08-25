@@ -1,0 +1,130 @@
+@import "./media.less";
+@import "./colors.less";
+@import "./fonts.less";
+
+#iticket-modal {
+    margin-top: 70px;
+    width: 100%;
+    color: red;
+    height: 91%;
+    position: fixed;
+    z-index: 2000;
+    background-color: rgba(0,0,0,0.8);
+    overflow-y: scroll;
+    @media @smartphones{
+        background-color: rgba(0,0,0,1);    
+    }
+}
+
+.drop-down-modal{
+    margin-top: 0px !important;
+    height: 100% !important;
+}
+
+#iticket-modal-container {
+    width: 100%;
+    @media @smartphones{
+        width: 100%;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+@media @smartphones{
+    .drop-down-modal-items-container{
+        padding-top: 3em;
+    }
+}
+
+#iticket-modal-close{
+    position: absolute;
+    width: 100%;
+    @media @smartphones{
+        display: none;
+    }
+}
+
+.drop-down-modal-close-container {
+    display: initial !important;
+}
+
+
+#close-btn-container {
+    float: right;
+    margin-right: 8.5%;
+    &:hover{
+        cursor: pointer;
+    }
+    @media @smartphones{
+        margin-right: 4%;
+    }
+}
+
+
+.modal-close-text{
+    margin-right: 0.5em;
+    @media @smartphones{
+        display: none;
+    }
+}
+
+.modal-close-icon{
+    @media @smartphones{
+        font-size: 1.5em;
+    } 
+}
+
+// Drop Down Modal
+@media @smartphones{
+    #drop-down-modal{
+        text-align: center;
+        color: white;
+        font-weight: lighter;
+        font-family: @main-font;
+    }
+    
+    .drop-down-modal-header {
+        font-size: 1.6em;
+    }
+    
+    .drop-down-modal-items {
+        margin-top: 3em;
+        font-size: 1.1em;
+    }
+    
+    .drop-down-modal-item {
+        margin: 0.3em;
+        padding: 1em;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+
+// Dates Modal
+
+.date-picker-value{
+    display: inline-block;
+    color: white;
+    font-family: @main-font;
+    &.to{
+        float: right;
+        text-align: right;
+        margin-right: 4%;
+    }
+    
+    &.from{
+        float: left;
+        margin-left: 4%;
+        text-align: left;        
+    }
+    
+    &.icon{
+        position: absolute;
+        right: 50%;
+        transform: translate(-50%,0);
+    }
+}
