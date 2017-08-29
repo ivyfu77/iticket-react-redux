@@ -9,18 +9,18 @@ if(isPRODUCTION){
     console.log("production build");
     externals = 
         {
-            'react' : "React",
-            'react-dom': 'ReactDOM',
-            'redux': 'createStore',
-            'redux': 'applyMiddleware',
-            'redux': 'combineReducers',
-            'redux': 'compose',
-            'react-redux': "Provider",
-            'react-router': "ReactRouter",
-            'react-router-dom': "Route",
+            // 'react' : "React",
+            // 'react-dom': 'ReactDOM',
+            // 'redux': 'createStore',
+            // 'redux': 'applyMiddleware',
+            // 'redux': 'combineReducers',
+            // 'redux': 'compose',
+            // 'react-redux': "Provider",
+            // 'react-router': "ReactRouter",
+            // 'react-router-dom': "Route",
             //'react-router-dom': "Switch",
             //'react-router-dom': "BrowserRouter",
-            'algoliasearch':'algoliasearch'
+            // 'algoliasearch':'algoliasearch'
         }
     var plugins = [
             new ExtractTextPlugin({
