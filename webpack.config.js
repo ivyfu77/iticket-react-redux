@@ -19,7 +19,7 @@ if(isPRODUCTION){
             'react-router': "ReactRouter",
             'react-router-dom': "Route",
             'react-router-dom': "Switch",
-            'react-router-dom': "BrowserRouter",
+            //'react-router-dom': "BrowserRouter",
             'algoliasearch':'algoliasearch'
         }
     var plugins = [
