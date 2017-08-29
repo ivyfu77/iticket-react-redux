@@ -18,7 +18,7 @@ if(isPRODUCTION){
             'react-redux': "Provider",
             'react-router': "ReactRouter",
             'react-router-dom': "Route",
-            'react-router-dom': "Switch",
+            //'react-router-dom': "Switch",
             //'react-router-dom': "BrowserRouter",
             'algoliasearch':'algoliasearch'
         }
